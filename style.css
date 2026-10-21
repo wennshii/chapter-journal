@@ -1,0 +1,566 @@
+#cj_settings .cj-help,
+#cj_settings #cj_status,
+#cj_settings .cj-empty {
+    opacity: 0.76;
+}
+
+#cj_settings .cj-field,
+.cj-review-dialog .cj-field {
+    display: grid;
+    gap: 0.3rem;
+    margin: 0.65rem 0;
+}
+
+#cj_settings .cj-actions,
+#cj_settings .cj-list-heading,
+.cj-review-actions,
+.cj-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+}
+
+#cj_settings .cj-list-heading {
+    justify-content: space-between;
+}
+
+#cj_settings #cj_status {
+    display: block;
+    min-height: 1.4em;
+    margin-top: 0.45rem;
+}
+
+#cj_settings .cj-chapter-list {
+    display: grid;
+    gap: 0.4rem;
+    margin-top: 0.55rem;
+}
+
+#cj_settings .cj-list-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+    border-radius: 0.45rem;
+    padding: 0.3rem;
+}
+
+#cj_settings .cj-list-jump {
+    display: grid;
+    gap: 0.1rem;
+    min-width: 0;
+    padding: 0.25rem 0.35rem;
+    color: inherit;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+#cj_settings .cj-list-jump strong,
+#cj_settings .cj-list-jump small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#cj_settings .cj-list-jump:hover,
+#cj_settings .cj-list-jump:focus-visible {
+    background: color-mix(in srgb, currentColor 8%, transparent);
+    outline: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    border-radius: 0.35rem;
+}
+
+#chat.cj-disabled .cj-chapter-end {
+    display: none !important;
+}
+
+#chat .cj-chapter-end {
+    color: inherit;
+}
+
+#chat .cj-chapter-end.cj-chapter-end-active {
+    color: var(--SmartThemeQuoteColor, #d8aa55);
+    filter: drop-shadow(0 0 0.2rem color-mix(in srgb, currentColor 50%, transparent));
+}
+
+#chat .cj-chapter-card {
+    margin: 0.65rem 0 0.15rem;
+    border: 0;
+    border-left: 2px solid color-mix(in srgb, var(--SmartThemeQuoteColor, #d8aa55) 70%, transparent);
+    border-radius: 0 0.35rem 0.35rem 0;
+    background: color-mix(in srgb, currentColor 2.5%, transparent);
+    overflow: clip;
+}
+
+#chat .cj-chapter-card[open] {
+    background: color-mix(in srgb, currentColor 4.5%, transparent);
+}
+
+#chat .cj-chapter-card > summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    list-style-position: inside;
+}
+
+#chat .cj-card-title {
+    min-width: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#chat .cj-chapter-card > summary small {
+    font-size: 0.76rem;
+    opacity: 0.52;
+    white-space: nowrap;
+}
+
+#chat .cj-card-body {
+    padding: 0.15rem 0.7rem 0.7rem;
+}
+
+#chat .cj-card-body p {
+    margin: 0.35rem 0 0.8rem;
+    white-space: pre-wrap;
+}
+
+#chat .cj-card-body h5 {
+    margin: 0.7rem 0 0.25rem;
+}
+
+#chat .cj-card-body ul {
+    margin: 0.2rem 0 0.6rem;
+    padding-inline-start: 1.4rem;
+}
+
+#chat .cj-stale {
+    border-style: dashed;
+}
+
+#chat .cj-stale > summary small {
+    color: var(--warning-color, #e7a45c);
+    opacity: 1;
+}
+
+#chat .cj-jump-highlight {
+    animation: cj-highlight 1.4s ease-out;
+}
+
+#cj_quickbar[hidden] {
+    display: none !important;
+}
+
+#cj_quickbar {
+    position: relative;
+    z-index: 80;
+    width: 2.8rem;
+    max-width: none;
+    color: var(--SmartThemeBodyColor, inherit);
+    font-size: 0.92rem;
+}
+
+#cj_quickbar.cj-docked {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    margin: 0.22rem 0.25rem 0.12rem auto;
+}
+
+#cj_quickbar.cj-floating {
+    position: fixed;
+    right: max(0.9rem, env(safe-area-inset-right));
+    bottom: max(6.5rem, calc(env(safe-area-inset-bottom) + 5rem));
+    z-index: 30000;
+    width: 2.8rem;
+}
+
+.cj-quick-toggle {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    min-height: 2.8rem;
+    padding: 0;
+    color: inherit;
+    text-align: left;
+    background: color-mix(in srgb, var(--SmartThemeBlurTintColor, #202126) 82%, transparent);
+    border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0.28rem 0.9rem rgb(0 0 0 / 0.28);
+    cursor: pointer;
+}
+
+.cj-quick-toggle:hover,
+.cj-quick-toggle:focus-visible,
+.cj-quick-toggle[aria-expanded="true"] {
+    border-color: color-mix(in srgb, currentColor 34%, transparent);
+    background: color-mix(in srgb, var(--SmartThemeBlurTintColor, #202126) 90%, currentColor 10%);
+    outline: none;
+}
+
+.cj-quick-icon {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--SmartThemeQuoteColor, #d8aa55);
+    font-size: 1rem;
+}
+
+#cj_quickbar.cj-generating .cj-quick-icon,
+#cj_quickbar.cj-generating .cj-quick-count {
+    opacity: 0.58;
+}
+
+.cj-quick-copy {
+    display: none;
+}
+
+.cj-quick-copy strong,
+.cj-quick-copy small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cj-quick-copy strong {
+    max-width: 15rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.cj-quick-copy small {
+    display: none;
+}
+
+.cj-quick-count {
+    position: absolute;
+    top: -0.35rem;
+    right: -0.35rem;
+    min-width: 1.35rem;
+    height: 1.25rem;
+    padding: 0 0.28rem;
+    font-size: 0.62rem;
+    line-height: 1.25rem;
+    text-align: center;
+    white-space: nowrap;
+    background: var(--SmartThemeBodyColor, #ece8df);
+    color: var(--SmartThemeBlurTintColor, #202126);
+    box-shadow: 0 0.1rem 0.35rem rgb(0 0 0 / 0.3);
+    border-radius: 999px;
+}
+
+.cj-quick-chevron {
+    display: none;
+}
+
+.cj-quick-toggle[aria-expanded="true"] .cj-quick-chevron {
+    transform: rotate(180deg);
+}
+
+.cj-quick-panel {
+    position: absolute;
+    right: calc(100% + 0.6rem);
+    bottom: 0;
+    left: auto;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: min(22rem, calc(100vw - 1rem));
+    max-height: min(56vh, 26rem);
+    background: color-mix(in srgb, var(--SmartThemeBlurTintColor, #202126) 96%, transparent);
+    border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+    border-radius: 0.55rem;
+    box-shadow: 0 0.65rem 2rem rgb(0 0 0 / 0.38);
+    overflow: hidden;
+}
+
+.cj-quick-panel[hidden] {
+    display: none !important;
+}
+
+.cj-quick-panel-header,
+.cj-quick-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.55rem 0.65rem;
+    background: transparent;
+}
+
+.cj-quick-panel-header {
+    border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.cj-quick-panel-header > div {
+    display: grid;
+    line-height: 1.25;
+}
+
+.cj-quick-panel-header small,
+.cj-quick-footer small {
+    font-size: 0.74rem;
+    opacity: 0.56;
+}
+
+.cj-quick-list {
+    display: grid;
+    gap: 0.05rem;
+    padding: 0.3rem;
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.cj-quick-list .cj-empty {
+    margin: 0;
+    padding: 1rem 0.65rem;
+    text-align: center;
+}
+
+.cj-quick-chapter {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 2.35rem;
+    padding: 0.38rem 0.5rem;
+    color: inherit;
+    text-align: left;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
+.cj-quick-chapter:hover,
+.cj-quick-chapter:focus-visible {
+    background: color-mix(in srgb, currentColor 6%, transparent);
+    border-color: transparent;
+    outline: none;
+}
+
+.cj-quick-chapter.cj-current {
+    background: color-mix(in srgb, var(--SmartThemeQuoteColor, #d8aa55) 8%, transparent);
+}
+
+.cj-quick-chapter span {
+    overflow: hidden;
+    font-size: 0.86rem;
+    font-weight: 550;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cj-quick-chapter small {
+    font-size: 0.72rem;
+    opacity: 0.62;
+    white-space: nowrap;
+}
+
+.cj-quick-footer > small {
+    flex: 1 1 auto;
+}
+
+.cj-quick-footer {
+    border-top: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+
+#cj_quick_end {
+    flex: 0 0 auto;
+    min-height: 2.1rem;
+    padding: 0.3rem 0.55rem;
+    font-size: 0.8rem;
+}
+
+@keyframes cj-highlight {
+    0%, 45% { box-shadow: inset 0 0 0 2px var(--SmartThemeQuoteColor, #d8aa55); }
+    100% { box-shadow: inset 0 0 0 2px transparent; }
+}
+
+.cj-review-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 31000;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgb(0 0 0 / 0.64);
+}
+
+.cj-review-backdrop[hidden] {
+    display: none !important;
+}
+
+.cj-review-dialog {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: min(50rem, 96vw);
+    max-height: min(90vh, 52rem);
+    color: var(--SmartThemeBodyColor, inherit);
+    background: var(--SmartThemeBlurTintColor, #202126);
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+    border-radius: 0.65rem;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 0.42);
+    overflow: hidden;
+}
+
+.cj-review-header,
+.cj-review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+.cj-review-header h3 {
+    margin: 0;
+}
+
+.cj-review-header small,
+.cj-review-footer small {
+    opacity: 0.72;
+}
+
+.cj-review-body {
+    padding: 0 1rem 1rem;
+    overflow: auto;
+}
+
+.cj-review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 0.8rem;
+}
+
+.cj-review-footer {
+    align-items: flex-start;
+}
+
+.cj-review-footer > small {
+    flex: 1 1 14rem;
+}
+
+.cj-small-button {
+    min-width: max-content;
+    padding: 0.2rem 0.45rem;
+}
+
+/* Some SillyTavern themes force .menu_button to icon-sized widths. Keep this
+   extension's text actions horizontal without changing buttons elsewhere. */
+#cj_settings .cj-actions > .menu_button,
+.cj-review-actions > .menu_button,
+.cj-card-actions > .menu_button,
+#cj_quick_end {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto !important;
+    inline-size: max-content !important;
+    width: max-content !important;
+    min-inline-size: max-content !important;
+    min-width: max-content !important;
+    max-width: 100%;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    writing-mode: horizontal-tb !important;
+}
+
+@media (max-width: 680px) {
+    #cj_quickbar.cj-docked {
+        margin: 0.2rem 0.35rem 0.1rem auto;
+        width: max-content;
+        max-width: calc(100% - 0.7rem);
+    }
+
+    #cj_quickbar.cj-floating {
+        right: max(0.7rem, env(safe-area-inset-right));
+        bottom: max(5.75rem, calc(env(safe-area-inset-bottom) + 4.75rem));
+        width: 2.8rem;
+        max-width: none;
+    }
+
+    .cj-quick-toggle {
+        grid-template-columns: 1fr;
+        width: 2.8rem;
+        height: 2.8rem;
+        min-height: 2.8rem;
+    }
+
+    .cj-quick-panel {
+        width: min(20rem, calc(100vw - 4.8rem));
+        max-height: min(60vh, 25rem);
+    }
+
+    .cj-quick-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #cj_quick_end {
+        min-height: 2.55rem;
+    }
+
+    .cj-quick-chapter {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.08rem;
+    }
+
+    #chat .cj-chapter-card > summary {
+        grid-template-columns: 1fr;
+    }
+
+    #chat .cj-chapter-card > summary small {
+        padding-inline-start: 1.2rem;
+    }
+
+    .cj-review-backdrop {
+        align-items: end;
+        padding: 0;
+    }
+
+    .cj-review-dialog {
+        width: 100vw;
+        max-height: 94vh;
+        border-radius: 0.75rem 0.75rem 0 0;
+    }
+
+    .cj-review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cj-review-footer {
+        flex-direction: column;
+    }
+
+    .cj-review-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #cj_quickbar .fa-spin {
+        animation: none !important;
+    }
+
+    .cj-quick-chevron {
+        transition: none;
+    }
+
+    #chat .cj-jump-highlight {
+        animation: none;
+        box-shadow: inset 0 0 0 2px var(--SmartThemeQuoteColor, #d8aa55);
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "display_name": "୨୧ Chapter Journal ୨୧",
+  "loading_order": 50,
+  "js": "index.js",
+  "css": "style.css",
+  "author": "Community Prototype",
+  "version": "0.6.0",
+  "auto_update": false
+}

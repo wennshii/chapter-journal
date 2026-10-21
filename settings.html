@@ -1,0 +1,94 @@
+<div id="cj_settings" class="extension_container">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>୨୧ Chapter Journal ୨୧</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <p class="cj-help">You choose where each chapter ends. AI only organizes the selected messages into an editable chapter record. Saved chapters are never injected into prompts.</p>
+
+            <label class="checkbox_label">
+                <input id="cj_enabled" type="checkbox">
+                <span>Enable Chapter Journal</span>
+            </label>
+
+            <label class="checkbox_label">
+                <input id="cj_quickbar_enabled" type="checkbox">
+                <span>Show the floating journal button</span>
+            </label>
+
+            <label class="cj-field">
+                <span>Maximum characters per chapter</span>
+                <input id="cj_max_chars" class="text_pole" type="number" min="5000" max="200000" step="5000">
+            </label>
+
+            <label class="cj-field">
+                <span>Additional organization instructions (optional)</span>
+                <textarea id="cj_extra_instructions" class="text_pole" rows="3" placeholder="Example: Focus on relationship changes and use poetic chapter titles."></textarea>
+            </label>
+
+            <div class="cj-actions">
+                <button id="cj_end_latest" class="menu_button" type="button">End Chapter at Latest Message</button>
+                <button id="cj_export" class="menu_button" type="button">Export Markdown</button>
+            </div>
+            <small id="cj_status" role="status">Ready</small>
+
+            <hr>
+            <div class="cj-list-heading">
+                <b>Chapters in This Chat</b>
+                <small id="cj_count">0 chapters</small>
+            </div>
+            <div id="cj_chapter_list" class="cj-chapter-list"></div>
+        </div>
+    </div>
+</div>
+
+<div id="cj_review" class="cj-review-backdrop" hidden aria-hidden="true">
+    <section class="cj-review-dialog" role="dialog" aria-modal="true" aria-labelledby="cj_review_heading">
+        <header class="cj-review-header">
+            <div>
+                <h3 id="cj_review_heading">Review Chapter</h3>
+                <small id="cj_review_range"></small>
+            </div>
+            <button id="cj_review_close" class="menu_button" type="button" aria-label="Close">×</button>
+        </header>
+
+        <div class="cj-review-body">
+            <label class="cj-field">
+                <span>Chapter Title</span>
+                <input id="cj_review_title" class="text_pole" type="text" maxlength="120">
+            </label>
+            <label class="cj-field">
+                <span>Chapter Summary</span>
+                <textarea id="cj_review_summary" class="text_pole" rows="6"></textarea>
+            </label>
+            <div class="cj-review-grid">
+                <label class="cj-field">
+                    <span>Timeline (one item per line)</span>
+                    <textarea id="cj_review_timeline" class="text_pole" rows="6"></textarea>
+                </label>
+                <label class="cj-field">
+                    <span>Character Changes (one item per line)</span>
+                    <textarea id="cj_review_characters" class="text_pole" rows="6"></textarea>
+                </label>
+                <label class="cj-field">
+                    <span>Items &amp; Clues (one item per line)</span>
+                    <textarea id="cj_review_items" class="text_pole" rows="6"></textarea>
+                </label>
+                <label class="cj-field">
+                    <span>Unresolved Threads (one item per line)</span>
+                    <textarea id="cj_review_unresolved" class="text_pole" rows="6"></textarea>
+                </label>
+            </div>
+        </div>
+
+        <footer class="cj-review-footer">
+            <small id="cj_review_status" role="status"></small>
+            <div class="cj-review-actions">
+                <button id="cj_review_regenerate" class="menu_button" type="button">Regenerate</button>
+                <button id="cj_review_cancel" class="menu_button" type="button">Cancel</button>
+                <button id="cj_review_save" class="menu_button" type="button">Save Chapter</button>
+            </div>
+        </footer>
+    </section>
+</div>
