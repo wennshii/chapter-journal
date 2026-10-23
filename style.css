@@ -176,8 +176,9 @@
 
 #cj_quickbar.cj-floating {
     position: fixed;
+    top: calc(100dvh - max(6.5rem, calc(env(safe-area-inset-bottom) + 5rem)) - 2.8rem);
     right: max(0.9rem, env(safe-area-inset-right));
-    bottom: max(6.5rem, calc(env(safe-area-inset-bottom) + 5rem));
+    bottom: auto;
     z-index: 30000;
     width: 2.8rem;
 }
@@ -485,8 +486,9 @@
     }
 
     #cj_quickbar.cj-floating {
+        top: calc(100dvh - max(5.75rem, calc(env(safe-area-inset-bottom) + 4.75rem)) - 2.8rem);
         right: max(0.7rem, env(safe-area-inset-right));
-        bottom: max(5.75rem, calc(env(safe-area-inset-bottom) + 4.75rem));
+        bottom: auto;
         width: 2.8rem;
         max-width: none;
     }
