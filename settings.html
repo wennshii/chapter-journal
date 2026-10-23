@@ -5,7 +5,7 @@
             <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
         </div>
         <div class="inline-drawer-content">
-            <p class="cj-help">You choose where each chapter ends. AI only organizes the selected messages into an editable chapter record. Saved chapters are never injected into prompts.</p>
+            <p class="cj-help">You choose where each chapter ends. AI organizes the selected messages into an editable chapter record and can sync saved chapters to this chat's Lorebook memory.</p>
 
             <label class="checkbox_label">
                 <input id="cj_enabled" type="checkbox">
@@ -16,6 +16,22 @@
                 <input id="cj_quickbar_enabled" type="checkbox">
                 <span>Show the floating journal button</span>
             </label>
+
+            <label class="checkbox_label">
+                <input id="cj_lorebook_memory" type="checkbox">
+                <span>Use saved chapters as Lorebook memory</span>
+            </label>
+
+            <label class="checkbox_label">
+                <input id="cj_vectorize_lorebook" type="checkbox">
+                <span>Enable semantic retrieval when SillyTavern Vectors is configured</span>
+            </label>
+
+            <div class="cj-actions">
+                <button id="cj_sync_lorebook" class="menu_button" type="button">Sync Lorebook Now</button>
+                <button id="cj_open_lorebook" class="menu_button" type="button">Open Synced Lorebook</button>
+            </div>
+            <small id="cj_memory_status" role="status">Lorebook memory is ready</small>
 
             <label class="cj-field">
                 <span>Maximum characters per chapter</span>
@@ -78,6 +94,14 @@
                 <label class="cj-field">
                     <span>Unresolved Threads (one item per line)</span>
                     <textarea id="cj_review_unresolved" class="text_pole" rows="6"></textarea>
+                </label>
+                <label class="cj-field">
+                    <span>Current State (one fact per line)</span>
+                    <textarea id="cj_review_current_state" class="text_pole" rows="6"></textarea>
+                </label>
+                <label class="cj-field">
+                    <span>Memory Keywords (one term per line)</span>
+                    <textarea id="cj_review_keywords" class="text_pole" rows="6"></textarea>
                 </label>
             </div>
         </div>

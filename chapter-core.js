@@ -3,8 +3,10 @@ function text(value) {
 }
 
 function textList(value, limit = 12) {
-    if (!Array.isArray(value)) return [];
-    return value
+    const source = Array.isArray(value)
+        ? value
+        : (typeof value === 'string' ? value.split(/\r?\n|;\s*/) : []);
+    return source
         .map(item => typeof item === 'string' ? item : item?.content)
         .map(text)
         .filter(Boolean)
@@ -31,6 +33,8 @@ export function parseChapterResponse(raw) {
         characterChanges: textList(value.character_changes ?? value.characterChanges),
         itemsAndClues: textList(value.items_and_clues ?? value.itemsAndClues),
         unresolved: textList(value.unresolved),
+        currentState: textList(value.current_state ?? value.currentState),
+        keywords: textList(value.keywords, 24),
     };
 
     if (!chapter.title) throw new Error('The model did not generate a chapter title.');
@@ -80,6 +84,7 @@ export function chapterToMarkdown(chapter, number) {
     appendList('Character Changes', chapter.characterChanges);
     appendList('Items & Clues', chapter.itemsAndClues);
     appendList('Unresolved Threads', chapter.unresolved);
+    appendList('Current State', chapter.currentState);
     return sections.join('\n').trim();
 }
 

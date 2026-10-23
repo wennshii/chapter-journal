@@ -1,23 +1,20 @@
-<div align="center">
-  <h1>୨୧ Chapter Journal ୨୧</h1>
-  <p><strong>A lightweight, AI-assisted organizer for long-form character conversations.</strong></p>
-  <p>Manual chapter boundaries · Editable AI summaries · Fast conversation navigation</p>
-</div>
+# ୨୧ Chapter Journal ୨୧
+
+A lightweight SillyTavern extension that turns long AI character conversations into editable chapters and searchable memory.
+
+## What it does
+
+- **You choose the chapter boundaries.** End a chapter from any message or at the latest message.
+- **AI organizes the conversation.** It creates an editable title, summary, timeline, character changes, current state, clues, and unresolved threads.
+- **Navigate long chats quickly.** Use the floating chapter index to jump back to important scenes.
+- **Remember earlier events.** Saved chapters sync to the current chat's Lorebook for keyword retrieval and optional semantic retrieval with SillyTavern Vectors.
+- **Keep stories separated.** Each chat has its own chapter memory, while Character Lorebooks continue to work alongside it.
 
 ## Preview
 
 ![Floating chapter navigation](assets/chapter-navigation.png)
 
 ![Editable chapter summary and timeline](assets/chapter-summary.png)
-
-## What it does
-
-- You decide where each chapter ends.
-- Your connected language model creates a title, summary, timeline, character changes, clues, and unresolved threads.
-- Review, edit, or regenerate every chapter before saving it.
-- Use the floating index to navigate long conversations.
-- Export your chapter journal as Markdown.
-- Keep an English interface while organizing multilingual conversations.
 
 ## Install
 
@@ -27,11 +24,13 @@ In SillyTavern, open **Extensions → Install Extension** and paste:
 
 Then select **Install**.
 
-## Use
+## How to use
 
-Select the open-book icon on a message, or open the floating journal button and choose **End at Latest Message**. Review the generated record, then select **Save Chapter**.
+1. Select the book icon on a message, or choose **End at Latest Message** from the floating journal.
+2. Review and edit the AI-generated chapter record.
+3. Select **Save Chapter**. The chapter appears in the index and syncs to the chat's Lorebook.
 
-Saved chapters stay in chat metadata and are never automatically injected into prompts.
+An LLM connection is required to generate chapter records. Semantic retrieval is optional and requires SillyTavern Vectors; keyword retrieval works without it.
 
 ## License
 
